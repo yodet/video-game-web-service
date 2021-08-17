@@ -25,7 +25,7 @@
 $(document).ready(function() {  
 
 	$('.category').click(function(e){
-        e.preventDefault(); //stop default action of the link
+        	e.preventDefault(); //stop default action of the link
 		cat = $(this).attr("href");  //get category from URL
 		loadAJAX(cat);  //load AJAX and parse JSON file
 	});
@@ -58,10 +58,10 @@ function bondJSON(data){
 	$('#filmtitle').html(data.title);
 
 	//clears other clicked films
-	$('#films').html('');
+	$("#films").html("");
 
 	//loop through films and add template
-	$.each(data.films.function(i,item));{
+	$.each(data.films.function(i,item);{ //reloads
 		let myFilm = bondTemplate(item);
 		$('<div></div>').html(myFilm).appendTo('#films');
 	});
@@ -93,7 +93,7 @@ function bondTemplate(film){
 				<b>Bond: </b>${film.Bond}<br />
 				<b>Budget: </b>${film.Budget}<br />
 				<b>BoxOffice: </b>${film.BoxOffice}<br />
-				<div class="pic"><img src="thumbnails/film.Image" /></div>
+				<div class="pic"><img src="thumbnails/${film.Image}" /></div>
 		</div>
 	
 	
@@ -119,21 +119,7 @@ function bondTemplate(film){
 		<a href="box" class="category">Bond Films By International Box Office Totals</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="films">
-			<!--
-			<div class="film">
-				<b>Film: </b> 1<br />
-				<b>Title: </b>Dr. No<br />
-				<b>Year: </b>1962<br />
-				<b>Director: </b>Terence Young<br />
-				<b>Producers: </b>Harry Saltzman and Albert R. Broccoli<br />
-				<b>Writers: </b>Richard Maibaum, Johanna Harwood and Berkely Mather<br />
-				<b>Composer: </b>Monty Norman<br />
-				<b>Bond: </b>Sean Connery<br />
-				<b>Budget: </b>$1,000,000.00<br />
-				<b>BoxOffice: </b>$59,567,035.00<br />
-				<div class="pic"><img src="thumbnails/dr-no.jpg" /></div>
-			</div>
-			-->
+			
 		</div>
 		<div id="output">Results go here</div>
 	</body>
