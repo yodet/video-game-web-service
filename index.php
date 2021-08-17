@@ -54,15 +54,50 @@ function bondJSON(data){
 	//HERE IS HOW I SEE DATA RETURNED VIA THE CONSOLE
 	console.log(data);
 
+	$('#filmtitle').html(data.title);
+
 	//this loads the data on the page but its all bunched up
 	//$("#output").text(JSON.stringify(data));
 
 	//this creates a map of the JSON on our page
+	/*
 	let myData = JSON.stringify(data, null, 4);
 	myData = "<pre>" + myData + "</pre>";
 	$("#output").html(myData);
+	*/
+}
+
+function bondTemplate(film){
+
+	return `
+		<div class="film">
+				<b>Film: </b>${film.Film}<br />
+				<b>Title: </b>${film.Title}<br />
+				<b>Year: </b>${film.Year}<br />
+				<b>Director: </b>${film.Director}<br />
+				<b>Producers: </b>${film.Producers}<br />
+				<b>Writers: </b>${film.Writers}<br />
+				<b>Composer: </b>${film.Composer}<br />
+				<b>Bond: </b>${film.Bond}<br />
+				<b>Budget: </b>${film.Budget}<br />
+				<b>BoxOffice: </b>${film.BoxOffice}<br />
+				<div class="pic"><img src="thumbnails/film.Image" /></div>
+		</div>
+	
+	
+	
+	
+	`;
+
+
+
+
+
 
 }
+
+
+
 
 </script>
 </head>
@@ -72,7 +107,7 @@ function bondJSON(data){
 		<a href="box" class="category">Bond Films By International Box Office Totals</a>
 		<h3 id="filmtitle">Title Will Go Here</h3>
 		<div id="films">
-			<div class="films">
+			<div class="film">
 				<b>Film: </b> 1<br />
 				<b>Title: </b>Dr. No<br />
 				<b>Year: </b>1962<br />
