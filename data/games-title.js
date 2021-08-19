@@ -16,7 +16,7 @@
 				"Company":"Mojang",
 				"Year": 2011,
 				"Rating":"E",
-				"Image":"portal.jpg"
+				"Image":"minecraft.jpg"
               },
               {
                 "Title": "Portal",
