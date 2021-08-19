@@ -66,6 +66,7 @@ function bondJSON(data){
 	//loop through films and add template
 	
 	$.each(data.games,function(i,item){ //reloads
+
 		let myGame = bondTemplate(item);
 		$('<div></div>').html(myGame).appendTo('#films');
 	});

@@ -31,7 +31,11 @@
 				"Company":"Mojang",
 				"Year": 2011,
 				"Rating":"E",
+<<<<<<< HEAD
 				"Image":"portal.jpg"
+=======
+				"Image":"minecraft.jpg"
+>>>>>>> 6968c36bb37bacc6f0e9dfabed5ffd817024baae
 			  },
 			  {
 			  "Title": "Counter-Strike Global Offensive",
@@ -42,4 +46,8 @@
 				"Image":"counter-strike-global-offensive.jpg"
 			  }
     ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6968c36bb37bacc6f0e9dfabed5ffd817024baae
